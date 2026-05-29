@@ -1,6 +1,6 @@
 # Nuzzle 🤱
 
-> Community-powered map of breastfeeding rooms, nursing lounges, and baby changing facilities.
+> Community-powered map of nursing lounges and baby changing facilities.
 
 A TypeScript monorepo with a **React Native (Expo)** mobile app and a **Next.js** web app, sharing core business logic. No user accounts required — favorites are stored on-device.
 
