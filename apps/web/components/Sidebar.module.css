@@ -1,0 +1,195 @@
+.sidebar {
+  width: 380px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  background: var(--cream-50);
+  overflow: hidden;
+}
+
+.searchWrap {
+  position: relative;
+  margin: 16px 16px 0;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-subtle);
+  pointer-events: none;
+}
+
+.search {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: white;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.search:focus { border-color: var(--sage-400); }
+.search::placeholder { color: var(--ink-subtle); }
+
+.filters {
+  display: flex;
+  gap: 7px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+.filters::-webkit-scrollbar { display: none; }
+
+.chip {
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  background: white;
+  color: var(--ink-muted);
+  font-size: 13px;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+.chip:hover { border-color: var(--sage-400); color: var(--sage-600); }
+.chipActive {
+  background: var(--sage-600);
+  border-color: var(--sage-600);
+  color: white;
+}
+
+.meta {
+  padding: 0 16px 8px;
+  font-size: 12px;
+  color: var(--ink-subtle);
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.card:hover {
+  border-color: var(--sage-200);
+  box-shadow: 0 2px 8px rgba(61, 122, 53, 0.08);
+}
+.cardActive {
+  border-color: var(--sage-400);
+  box-shadow: 0 0 0 3px rgba(106, 170, 96, 0.15);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.cardName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.dist {
+  font-size: 12px;
+  color: var(--ink-subtle);
+}
+
+.fav {
+  background: none;
+  border: none;
+  font-size: 17px;
+  color: var(--border-strong);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.15s, transform 0.1s;
+}
+.fav:hover { transform: scale(1.2); }
+.favActive { color: var(--blush-400); }
+
+.address {
+  font-size: 12px;
+  color: var(--ink-subtle);
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  padding: 3px 9px;
+  background: var(--sage-50);
+  color: var(--sage-600);
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+}
+
+.tagMore {
+  font-size: 11px;
+  color: var(--ink-subtle);
+  padding: 3px 6px;
+}
+
+.cardFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.hours {
+  font-size: 11px;
+  color: var(--ink-subtle);
+}
+
+.rating {
+  font-size: 12px;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--ink-subtle);
+  font-size: 14px;
+  line-height: 2;
+}
