@@ -70,7 +70,7 @@ nuzzle/
 ### 1. Clone and install
 
 ```bash
-git clone
+git clone https://github.com/Mleng89/nuzzle.git
 cd nuzzle
 npm install
 ```
