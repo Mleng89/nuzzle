@@ -25,7 +25,7 @@ A TypeScript monorepo with a **React Native (Expo)** mobile app and a **Next.js*
 ## Project structure
 
 ```
-nurture-spot/
+nuzzle/
 ├── apps/
 │   ├── mobile/                    ← Expo (iOS + Android)
 │   │   ├── app/
