@@ -157,7 +157,7 @@ export default function LocationDetailScreen() {
             onPress={() =>
               Alert.alert(
                 "Suggest an edit",
-                "Coming soon! Thank you for helping keep NurtureSpot accurate.",
+                "Coming soon! Thank you for helping keep nuzzle accurate.",
               )
             }
           >

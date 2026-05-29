@@ -15,9 +15,9 @@
  *   const favs = useFavorites({ storage: AsyncStorage })
  */
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from "react";
 
-const KEY = 'nurture_spot_favorites_v1';
+const KEY = "nuzzle_favorites_v1";
 
 interface StorageAdapter {
   getItem(key: string): Promise<string | null>;
@@ -27,11 +27,11 @@ interface StorageAdapter {
 // Web fallback using localStorage
 const webStorage: StorageAdapter = {
   getItem: async (key) => {
-    if (typeof window === 'undefined') return null;
+    if (typeof window === "undefined") return null;
     return window.localStorage.getItem(key);
   },
   setItem: async (key, value) => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     window.localStorage.setItem(key, value);
   },
 };
@@ -62,24 +62,26 @@ export function useFavorites(options: Options = {}): FavoritesResult {
         }
       }
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleFavorite = useCallback(
     async (id: string) => {
       setFavoriteIds((prev) => {
-        const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+        const next = prev.includes(id)
+          ? prev.filter((x) => x !== id)
+          : [...prev, id];
         // Persist asynchronously (fire-and-forget, state is already updated)
         storage.setItem(KEY, JSON.stringify(next));
         return next;
       });
     },
-    [storage]
+    [storage],
   );
 
   const isFavorite = useCallback(
     (id: string) => favoriteIds.includes(id),
-    [favoriteIds]
+    [favoriteIds],
   );
 
   return { favoriteIds, isFavorite, toggleFavorite };

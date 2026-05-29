@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "nurturespot",
+    "scheme": "nuzzle",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
@@ -15,10 +15,10 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.nurturespot.app",
+      "bundleIdentifier": "com.nuzzle.app",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "NurtureSpot uses your location to show nursing rooms near you.",
-        "NSLocationAlwaysUsageDescription": "NurtureSpot uses your location to show nursing rooms near you."
+        "NSLocationWhenInUseUsageDescription": "nuzzle uses your location to show nursing rooms near you.",
+        "NSLocationAlwaysUsageDescription": "nuzzle uses your location to show nursing rooms near you."
       },
       "config": {
         "googleMapsApiKey": "YOUR_IOS_GOOGLE_MAPS_KEY"
@@ -29,7 +29,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#fdfaf4"
       },
-      "package": "com.nurturespot.app",
+      "package": "com.nuzzle.app",
       "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
       "config": {
         "googleMaps": {
@@ -43,7 +43,7 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow NurtureSpot to use your location to find nursing rooms near you."
+          "locationAlwaysAndWhenInUsePermission": "Allow nuzzle to use your location to find nursing rooms near you."
         }
       ]
     ],

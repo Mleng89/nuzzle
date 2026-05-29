@@ -58,7 +58,7 @@ export default function MapView({
   return (
     <div className={styles.wrap}>
       <Map
-        mapId="nurture-spot-map"
+        mapId="nuzzle-map"
         defaultCenter={center}
         defaultZoom={14}
         gestureHandling="greedy"
